@@ -1,0 +1,8 @@
+﻿  GroupNetwork.cpp
+C:\Users\sanja\source\repos\Group-Network\Group-Network\GroupNetwork.cpp(22,8): warning C4477: 'scanf' : format string '%[^\n]' requires an argument of type 'char *', but variadic argument 1 has type 'char **'
+  Generating code
+  6 of 25 functions (24.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Group-Network.vcxproj -> C:\Users\sanja\source\repos\Group-Network\Release\Group-Network.exe
