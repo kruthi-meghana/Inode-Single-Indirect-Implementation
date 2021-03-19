@@ -7,10 +7,10 @@
 
 # Implementation
 
-   * I have used a file of 1MB for the memory access representing each bit as a 128-bytes block. Given a byte(8-bits), the value of byte is set to 1 only when
-   all the 8-bits are occupied, where each bit is mapped to a 128-bytes block.
+   * I have used a file of 1MB for the memory access representing each bit as a 128-bytes block. Given a byte(8-bits), the value of byte is set to 255 when
+   all the 8-bits are occupied( or set to 1). And each bit is set to 1 when it is mapped to a 128-bytes block.
 
-   * Keeping the size of file in mind, I have implemented Inode using single direct and single indirect pointers.
+   * Keeping the size of file(1MB) in mind, I have implemented Inode using only single direct and single indirect pointers.
    
 # Structure of modules:
 
