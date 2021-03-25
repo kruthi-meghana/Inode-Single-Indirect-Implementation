@@ -4,7 +4,7 @@
 
 #define SIGNATURE "KM"
 #define USER_ID_SIZE 8
-#define USERNAME 28
+#define USERNAME 31
 #define GROUP_COUNT 5
 #define GROUP_DESCRIPTION 30
 #define GROUP_TITLE 20
@@ -60,8 +60,6 @@ struct comments {
 	int comment_likes_count;
 	char comment_body[COMMENT_SIZE];
 }; //size of comments is 128-bits = BLOCK_SIZE
-
-
 
 
 struct blockPointers {

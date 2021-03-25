@@ -21,7 +21,8 @@ void view_comments(FILE* fp, long int address) {
 	struct comments comment;
 	fseek(fp, address, SEEK_SET);
 	fread(&message, sizeof(struct messages), 1, fp);
-
+	printf("\t\t%s: %s\n", message.user_name, message.message_body);
+	printf("\t\t*******************************************\n");
 	if (message.comments_count == 0) {
 		printf("\t\t\tNo comments on the post\n");
 		return;
@@ -37,9 +38,9 @@ void view_comments(FILE* fp, long int address) {
 			fseek(fp, blck_ptr.pointers[i - 10], SEEK_SET);
 		}
 		fread(&comment, sizeof(struct comments), 1, fp);
-		printf("\t\t\t%s\n", comment.comment_body);
+		printf("\t\t\t%s: %s\n",comment.user_name, comment.comment_body);
 	}
-	printf("*******************************************************************************\n");
+	printf("\n\t\tReached END!\n\t\t******************************************\n");
 
 }
 

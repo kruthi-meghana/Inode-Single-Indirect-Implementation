@@ -1,4 +1,4 @@
 ﻿  GroupNetwork.cpp
-C:\Users\sanja\source\repos\Group-Network\Group-Network\stdusers.h(12,15): warning C4101: 'user1': unreferenced local variable
-C:\Users\sanja\source\repos\Group-Network\Group-Network\stdgroup.h(34,7): warning C4101: 'message_body': unreferenced local variable
-  Group-Network.vcxproj -> C:\Users\sanja\source\repos\Group-Network\Group-Network\Debug\Group-Network.exe
+C:\Users\sanja\OneDrive\Documents\GitHub\Inode-Single-Indirect-Implementation\Group-Network\stdusers.h(12,15): warning C4101: 'user1': unreferenced local variable
+C:\Users\sanja\OneDrive\Documents\GitHub\Inode-Single-Indirect-Implementation\Group-Network\stdgroup.h(34,7): warning C4101: 'message_body': unreferenced local variable
+  Group-Network.vcxproj -> C:\Users\sanja\OneDrive\Documents\GitHub\Inode-Single-Indirect-Implementation\Group-Network\Debug\Group-Network.exe

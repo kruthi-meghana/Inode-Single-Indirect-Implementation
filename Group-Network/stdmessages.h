@@ -41,6 +41,7 @@ int display_message( FILE* fp, struct groups* grp, int start, int end) {
 		fseek(fp, address, SEEK_SET);
 		fread(&message, sizeof(struct messages), 1, fp);
 		printf("\t\t%d) %s: %s\n",i+1,message.user_name, message.message_body);
+		printf("\t\t    Likes Count: %d   Comments Count: %d\n\n", message.likes_count, message.comments_count);
 	}
 	if (i == grp->message_count)
 		printf("\n\t\tReached END!\n\t\t******************************************\n");	
@@ -68,7 +69,7 @@ void message_viewer(struct groups* group, FILE* fp, char* username) {
 				displayed_count = display_message(fp, group, displayed_count, displayed_count + 10);
 			}
 			else {
-				printf("\n\t\tPlease Enter the message number you wish to respond\n");
+				printf("\n\t\tPlease Enter the post number you wish to respond\n");
 				item = scanf("%d", &msg_no);
 				addr = get_message(msg_no, group, fp);
 				if (option == 2) {
@@ -85,7 +86,7 @@ void message_viewer(struct groups* group, FILE* fp, char* username) {
 			printf("\t\t1. Like a post\n\t\t2. Comment on a post\n\t\t3. View comments\n\t\t4. Back\n");
 			int item = scanf("%d", &option);
 			if (option != 4) {
-				printf("\n\t\tPlease Enter the message number you wish to respond\n");
+				printf("\n\t\tPlease Enter the post number you wish to respond\n");
 				item = scanf("%d", &msg_no);
 				addr = get_message(msg_no-1, group, fp);
 				switch (option) {

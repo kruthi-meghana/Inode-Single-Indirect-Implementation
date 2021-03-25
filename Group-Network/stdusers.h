@@ -19,12 +19,22 @@ long int create_group_users(FILE* fp) {
 	return start_address;
 }
 
-void add_new_users(struct groups* group, char* user_name, FILE* fp, int group_no) {
+bool check_user_exist(struct users* user, char* new_user) {
+	for (int i = 0; i < user->users_count; i++) {
+		if (strcmp(user->user_name[i], new_user) == 0)
+			return true;
+	}
+	return false;
+}
 
+void add_new_users(struct groups* group, char* user_name, FILE* fp, int group_no) {
 	struct users group_users;
 	long int addr = DATA_BLOCK_POSITION + (BLOCK_SIZE * 2) * (group_no);
 	fseek(fp, addr, SEEK_SET);
 	fread(&group_users, sizeof(struct users), 1, fp);
+
+	if (check_user_exist(&group_users, user_name))
+		return;
 
 	strcpy(group_users.user_name[group_users.users_count], user_name);
 	group_users.users_count++;
