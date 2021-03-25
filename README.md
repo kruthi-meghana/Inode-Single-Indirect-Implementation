@@ -2,8 +2,9 @@
 
 # ProblemStatement
 
-      To build a C++ application that handles five different forums, its users, their msgs, likes and comments. 
-      The whole idea of this project is to implement the Inode data structure in accessing the memory. 
+      To build a C++ application that handles five different forums, its users, their msgs, likes and
+      comments. The whole idea of this project is to implement the Inode data structure in 
+      accessing the memory. 
 
 # Implementation
 
